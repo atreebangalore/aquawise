@@ -127,7 +127,10 @@ This project is a static web app. To run locally:
 
 ## Contact
 
-For queries or support, or visit our [team page](team.html).
+For queries or support, mail to waterlab@atree.org.
+**ATREE – Ashoka Trust for Research in Ecology and the Environment**  
+Website: [https://www.atree.org](https://www.atree.org)  
+For feedback or contributions, please open an issue or PR on the GitHub repository.
 
 ---------------------------------------------------------------------------------------------------------------------------
 
@@ -247,6 +250,9 @@ AquaWISE is a client-side web application and decision support tool for selectin
 - **Supported by:** ATREE Water and Soil Lab, CDRI
 
 For bug reports, feature requests, or contributions, please open an issue or contact the team.
+
+
+
 
 ---
 
