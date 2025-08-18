@@ -1,6 +1,7 @@
 # AquaWISE
 
 AquaWISE is a web-based decision support tool designed to assist users in selecting site-specific greywater treatment technologies for non-residential schools, particularly in arid and semi-arid regions. Developed by the ATREE Water and Soil Lab with support from CDRI, AquaWISE leverages nature-based solutions (NbS) to recommend effective and low-cost greywater management interventions.
+https://aquawise.atree.org/
 
 ![AquaWISE Logo](assets/img/logos/aquawise_logof.png)
 
