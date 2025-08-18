@@ -1,0 +1,1313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>CDRI Tool</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <style>
+        .help-tip2 {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            margin-left: 0;
+        }
+
+        .help-tip2 .help-tip2-content {
+            visibility: hidden;
+            font-size: 12px;
+            background-color: #f9f9f9;
+            color: #333;
+            text-align: left;
+            border-radius: 6px;
+            padding: 10px;
+            position: absolute;
+            line-height: normal;
+
+
+            left: 50%;
+            margin-left: -100px;
+            /* Adjust this value as needed */
+
+            margin-top: 10px;
+        }
+
+        .help-tip2:hover .help-tip2-content {
+            visibility: visible;
+        }
+
+        .containerx {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            gap: 20px;
+        }
+
+        .partner {
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .partner_cdri {
+            width: 100%;
+            max-width: 200px;
+           
+
+        }
+
+        .partner_atree {
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .containerc {
+            position: relative;
+        }
+
+        .carosoul_textcontent {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            width: 100%;
+            position: absolute;
+            top: 15%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .carousel_logo_text {
+            width: 100%;
+            display: block;
+            justify-content: center;
+        }
+       
+
+        @media (max-width:768px) {  
+            /* mobile */
+            .help-tip2{
+                display: none;
+            }
+           
+            .tagline{
+                margin-top: -20px; 
+                font-size: 15px; 
+                color: black; 
+                font-weight: bold; 
+            }
+            .mob_img{
+                width: 500px;
+            }
+           
+            
+        }
+
+
+        @media (min-width: 768px) {
+            .partner {
+                width: 45%;
+            }
+
+            .containerx {
+                display: flex;
+                justify-content: center;
+            }
+            .tagline{
+                margin-top: -30px; 
+                font-size: 20px; 
+                color: black; font-weight: bold; 
+            }
+
+
+        }
+    </style>
+</head>
+<script src="js/headerand%20footerManager.js"></script>
+
+<body id="page-top">
+    <special-header></special-header>
+    <script>
+        let language = document.getElementById('eng_ka');
+        language.style.display = 'flex';
+        language.style.cursor = 'pointer';
+
+    </script>
+    <!-- Navigation-->
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color: white">
+            <div class="container">
+                <a class="navbar-brand" href="https://www.atree.org"><img src="assets/img/navbar-logo_atree.png" alt="..." /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0" >
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="tools.html">The Tool</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">About US</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Team</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>-->
+    <!-- Masthead-->
+    <!-- <header class="masthead">
+        <div class="container">
+
+                       <img class="mob_img" src="assets/img/logos/aquawise_logof.png">
+            <div class="masthead-subheading" style="margin-top: -10px;">Generating school specific Integrated Wastewater
+                management solutions </div>
+            <a class="btn btn-primary btn-xl text-uppercase" href="tools.html">Explore the tool</a>
+        </div>
+    </header> -->
+    <header class="masthead2">
+        <div class="containerc">
+
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                        aria-label="Slide 5"></button>
+                </div>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="carousel-inner-img" src="assets/img/carousel/1.jpg" class="d-block w-100"
+                            alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="carousel-inner-img" src="assets/img/carousel/2.jpg" class="d-block w-100"
+                            alt="Image 2">
+
+                    </div>
+                    <div class="carousel-item">
+                        <img class="carousel-inner-img" src="assets/img/carousel/3.jpg" class="d-block w-100"
+                            alt="Image 3">
+
+                    </div>
+                    <div class="carousel-item">
+                        <img class="carousel-inner-img" src="assets/img/carousel/4.jpg" class="d-block w-100"
+                            alt="Image 4">
+
+                    </div>
+                    <div class="carousel-item">
+                        <img class="carousel-inner-img" src="assets/img/carousel/5.jpg" class="d-block w-100"
+                            alt="Image 5">
+
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+
+            <div class="carosoul_textcontent">
+                <div class="carousel_logo_text">
+                    <div class="container">
+
+                        <img class="mob_img" src="assets/img/logos/aquawise_logof.png">
+                        <div id="sub_head_caro" class="masthead-subheading tagline" >Generating school specific
+                            integrated wastewater
+                            management solutions </div>
+                        <a id="explore_tool" class="btn btn-primary btn-xl text-uppercase" href="tools.html#cx">Explore the tool</a>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </header>
+
+    <!-- Services-->
+
+    <section class="page-section" id="services">
+        <div class="container">
+            <div class="text-center">
+                <h2 id="wia" class="section-heading ">What is AquaWISE?</h2>
+                <h3 id="wia_desc" class="section-subheading text-muted">AquaWISE is a web-based decision support tool created to assist users
+                    select site-specific greywater treatment technologies for schools
+                    located in arid and semi-arid regions. The tool requires minimal input,
+                    utilizing readily accessible data on the school&#39;s water consumption,
+                    socio-economic factors and the intended use of treated wastewater. It
+                    aids in identifying the most suitable and cost-effective treatment
+                    solutions for individual non- residential schools in countries                    
+                    throughout the global south.
+                </h3>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                        <img src="assets/img/icon/flower.svg" class="fa-stack-1x fa-inverse"
+                            style="width:70px; filter: brightness(0) invert(1);" alt="Custom Icon">
+                    </span>
+                    <h4 id="nbs" class="my-3">Enables scaling up of nature-based solutions (NbS)
+                    </h4>
+                    <p id="nbs_desc" class="text-muted">AquaWISE significantly reduces the costs and efforts by eliminating the need to gather data on water supply, wastewater generation and its characteristics. This facilitates the effective scaling up of nature-based solutions (NbS) in schools.
+
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                        <img src="assets/img/icon/input.svg" class="fa-stack-1x fa-inverse"
+                            style="width:100px; filter: brightness(0) invert(1);" alt="Custom Icon">
+                    </span>
+                    <h4 id="csol" class="my-3">Customised Solutions</h4>
+                    <p id='csol_desc' class="text-muted">AquaWISE eliminates unnecessary resource use and mitigates the risks of over designing or under designing, which are common issues with ad hoc interventions.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                        <img src="assets/img/icon/users.svg" class="fa-stack-1x fa-inverse"
+                            style="width:50px; filter: brightness(0) invert(1);" alt="Custom Icon">
+                    </span>
+                    <h4 id="wru" class="my-3">Wide Range of Users</h4>
+                    <p id="wru_desc" class="text-muted">AquaWISE is versatile and can be used by a variety of practitioners, including local and international NGOs, government agencies, and communities across the global South.
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Portfolio Grid-->
+    <section class="page-section bg-light" id="portfolio">
+        <div class="container">
+            <div class="text-center">
+                <h2 id="wti" class="section-heading ">Why is this tool important?</h2>
+                <h3 class="section-subheading text-muted"></h3>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- Portfolio item 1-->
+                    <div class="portfolio-item">
+                        <a id="pf1" class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/1.jpg" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div id="identify_gw" class="portfolio-caption-heading">Identify Greywater</div>
+                            <div id="sub_identify_gw" class="portfolio-caption-subheading text-muted">How is it different from blackwater?
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- Portfolio item 2-->
+                    <div class="portfolio-item">
+                        <a id="pf2" class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/2.jpg" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div id="gw_manage" class="portfolio-caption-heading">Greywater Management</div>
+                            <div id="sub_gw_manage" class="portfolio-caption-subheading text-muted">Why do we need greywater management?
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- Portfolio item 3-->
+                    <div class="portfolio-item">
+                        <a id="pf3" class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/3.jpg" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div id="tis" class="portfolio-caption-heading">Treat it Separately!</div>
+                            <div id="sub_tis" class="portfolio-caption-subheading text-muted">Why should it be treated separately?
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                    <!-- Portfolio item 4-->
+                    <div class="portfolio-item">
+                        <a id="pf4" class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/4.jpg" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div id="tes" class="portfolio-caption-heading">Treated Effluent Standards</div>
+                            <div id="sub_tes" class="portfolio-caption-subheading text-muted">How much treatment is required?</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
+                    <!-- Portfolio item 5-->
+                    <div class="portfolio-item">
+                        <a id="pf5" class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/5.jpg" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div id="ei" class="portfolio-caption-heading">Existing Interventions</div>
+                            <div id="sub_ei" class="portfolio-caption-subheading text-muted">How can we treat the greywater?
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <!-- Portfolio item 6-->
+                    <div class="portfolio-item">
+                        <a id="pf6" class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/6.jpg" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div id="aqua_wise" class="portfolio-caption-heading">AquaWISE</div>
+                            <div id="sub_aqua_wise" class="portfolio-caption-subheading text-muted"> What can be expected from the
+                                dashboard?
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About-->
+    <section class="page-section" id="about">
+        <div class="container">
+            <div class="text-center">
+                <h2 id="hiw" class="section-heading">How does it work?</h2>
+                <h3 class="section-subheading text-muted"></h3>
+            </div>
+            <ul class="timeline">
+                <li>
+                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/1.jpg"
+                            alt="..." /></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4></h4>
+                            <h4 id="psec" class="subheading">Physical and Socio-Economic Characteristics
+                            </h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p id="psec_desc" class="text-muted">Input basic information about the school's existing water supply
+                                sources, location, and population into the tool. Such as, no of teachers, no of
+                                students, primary and secondary water source etc.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="timeline-inverted">
+                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/2.jpg"
+                            alt="..." /></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4></h4>
+                            <h4 id="eeuat" class="subheading">Expected End-Use After Treatment</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p id="eeuat_desc" class="text-muted"> Specify your preference for the end-use of treated greywater whether
+                                it will be
+                                discharged into a nearby public sewer or storm water drain or if it be will be
+                                reused for flushing or gardening.
+
+                                The tool will then suggest solutions based on the chosen end-use.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/3.jpg"
+                            alt="..." /></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4></h4>
+                            <h4 id="aa" class="subheading">Available Area (m²)</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p id="aa_desc" class="text-muted">Input the available area in the school for the intervention.
+                                This is a crucial parameter that determines the feasible interventions and sets the
+                                boundary conditions for further computation.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="timeline-inverted">
+                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/4.jpg"
+                            alt="..." /></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4></h4>
+                            <h4 id="to" class="subheading">Treatment Options
+                            </h4>
+                        </div>
+                        <!-- <div class="timeline-body"><p class="text-muted">The tool will generate recommendations for five suitable nature-based solutions, listed in order of their increasing area requirements. 
+                                An overview of the associated capital costs will also be provided. <div style="display: flex; justify-content: end; width: 100%; align-items: end;">
+                                       <div class="help-tip2">
+                                        <p><b>Public Supply</b>- Bulk water provided by government within the municipal area
+                                            <br><br>
+                                            <b>Groundwater Private Supply</b>-  Water obtained from private borewells.
+                                            <br><br>
+                                            <b>Tanker</b> - Water supply from other private suppliers
+                                        </p>
+                                    </div>
+                                </div> 
+                                
+                            </p></div> -->
+                        <div class="timeline-body">
+                            <p id="to_desc" class="text-muted">
+                                AquaWISE will generate a menu of treatment options which are nature-based solutions (NbS), listed in order of their increasing area requirement, along with an estimate of the associated Capex charges.
+                                <span id="help_txt" class="help-tip2" >
+                                    <span class="help-tip2-content" style="left: -300px;">       
+                                        <b>Capital expenditure (CAPEX)</b>:
+                                        CAPEX refers to upfront cost of setting up the intervention. These costs are
+                                        usually one-time
+                                        cost incurred at the start of the implementation project. Broadly, these costs
+                                        can include –
+                                        cost of excavation, materials, and labour required to build the treatment
+                                        system.
+                                        (Wetlands)
+
+                                    </span>
+                                </span>
+                            </p>
+                        </div>
+
+
+
+
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/5.jpg"
+                            alt="..." /></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4></h4>
+                            <h4 id="wf" class="subheading">Way Forward </h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p id="wf_desc" class="text-muted">You can download the results directly to your device and also gain
+                                access to a comprehensive overview about each of the suggested treatment technologies.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="timeline-inverted">
+                    <div class="timeline-image">
+                        <a href="tools.html#cx" style="color: white; text-decoration: none">
+                            <h4 id="coa">
+                                Check
+                                <br />
+                                out
+                                <br />
+                                AquaWISE
+                            </h4>
+                        </a>
+
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- Team-->
+    <section class="page-section bg-light" id="team" style="display: none">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Our Team</h2>
+                <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle" src="assets/img/team/1.jpg" alt="..." />
+                        <h4>Priyanka Jamwal</h4>
+                        <p class="text-muted">Sr. Fellow, ATREE</p>
+
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle" src="assets/img/team/2.jpg" alt="..." />
+                        <h4>Person2</h4>
+                        <p class="text-muted">Designation</p>
+
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle" src="assets/img/team/3.jpg" alt="..." />
+                        <h4>Person 3</h4>
+                        <p class="text-muted">Designation</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque,
+                        laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="py-5 bg-light" style="display: flex; justify-content: center">
+        <!-- <div class="container" style="display: flex; justify-content: center; width: 100%;">
+            <div>
+                <div class="" style="width: 50%; display: flex; justify-content: center;">
+                    <h2 class="section-heading text-uppercase" style="width: 100%; text-align: center;">Funding Partner
+                    </h2>
+                    <div class="col-md-3 col-sm-6 my-3" style="width: 100%; display: flex; justify-content: center">
+                        <a href="https://www.cdri.world/" target="_blank" rel="noopener noreferrer"><img
+                                style="width: 220px;" src="assets/img/logos/CDRI_Logo.png" alt="..."
+                                aria-label="Microsoft Logo" /></a>
+                    </div>
+
+                </div>
+            </div>
+            <div>
+                <div class="" style="width: 50%; display: flex; justify-content: center;">
+
+                     Funded by and Supported by
+                    <h2 class="section-heading text-uppercase" style="width: 100%; text-align: center;">Supporting
+                        Partner</h2>
+                    <div class="col-md-3 col-sm-6 my-3" style="width: 100%; display: flex; justify-content: center">
+                        <a href="https://www.cdri.world/" target="_blank" rel="noopener noreferrer"><img
+                                style="width: 220px;" src="assets/img/logos/CDRI_Logo.png" alt="..."
+                                aria-label="Microsoft Logo" /></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row align-items-center" style="margin-top: 50px">
+            </div>
+            
+        </div> -->
+        <div class="containerx">
+            <div class="partner" id="funding-partner">
+                <h2 id="funding_p" class="section-subheading ">Funding Partner</h2>
+                <div class="logo">
+                    <a href="https://www.cdri.world/" target="_blank" rel="noopener noreferrer">
+                        <img class="partner_cdri" src="assets/img/logos/CDRI_Logo.png" alt="Funding Partner Logo"
+                            aria-label="Funding Partner Logo" />
+                    </a>
+                </div>
+            </div>
+            <div class="partner" id="supporting-partner">
+                <h2 id="supporting_p" class="section-subheading ">Supporting Partner</h2>
+                <div class="logo">
+                    <a href="https://www.atree.org/" target="_blank" rel="noopener noreferrer">
+                        <img class="partner_atree" src="assets/img/logos/atree.png" alt="Supporting Partner Logo"
+                            aria-label="Supporting Partner Logo" />
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-center" style="margin-top: 50px;"></div>
+
+
+
+
+
+
+
+    </div>
+    <!--                    <div class="col-md-3 col-sm-6 my-3">-->
+    <!--                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/google.svg" alt="..." aria-label="Google Logo" /></a>-->
+    <!--                    </div>-->
+    <!--                    <div class="col-md-3 col-sm-6 my-3">-->
+    <!--                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/facebook.svg" alt="..." aria-label="Facebook Logo" /></a>-->
+    <!--                    </div>-->
+    <!--                    <div class="col-md-3 col-sm-6 my-3">-->
+    <!--                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/ibm.svg" alt="..." aria-label="IBM Logo" /></a>-->
+    <!--                    </div>-->
+
+    <special-footer></special-footer>
+
+    <!-- Portfolio Modals-->
+    <!-- Portfolio item 1 modal popup-->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
+                        alt="Close modal" /></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project details-->
+                                <h2 id="p_identify_gw" class="text-uppercase">Identify Greywater</h2>
+                                <p></p>
+                                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/1.jpg" alt="..." />
+                                <h3 id="p_sub_identify_gw" class="item-intro text-muted">How is it different from blackwater?</h3>
+                                <p id="p_identify_gw_desc" style="text-align: left;">Wastewater can be classified into two categories:
+                                    blackwater and greywater.
+                                    <br><br><b>Blackwater</b> is the wastewater from toilets that contains
+                                    faecal matter and pathogens, this waste doesn't break down and decompose in water fast
+                                    or effectively enough to be re-used in domestic irrigation without the risk of
+                                    contamination.
+                                    <br><br><b>Greywater</b> is commonly defined as wastewater generated from most domestic purposes like bathing, 
+                                    washing dishes, laundry etc, it is the category of wastewater that is not contaminated with faecal or urinal matter.
+                                    <br><br>The majority of its pollutants are derived from soaps, shampoos, detergents, sweat, dead skin, hairs, oil and grease 
+                                    and is characterized by the presence of substantially less harmful bacteria and pathogens when compared to blackwater, hence its 
+                                    treatment and reuse is widely preferred especially in water scarce areas.
+
+
+                                </p>
+                                <!-- <ul class="list-inline">
+                                        <li>
+                                            <strong>Client:</strong>
+                                            Threads
+                                        </li>
+                                        <li>
+                                            <strong>Category:</strong>
+                                            Illustration
+                                        </li>
+                                    </ul> -->
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
+                                    type="button">
+                                    <i class="fas fa-xmark me-1"></i>
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio item 2 modal popup-->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
+                        alt="Close modal" /></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project details-->
+                                <h2 id="p_gw_manage" class="text-uppercase">Greywater Management</h2>
+                                <p></p>
+
+                                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/2.jpg" alt="..." />
+                                <h3 id="'p_sub_gw_manage" class="item-intro text-muted">Why do we need greywater management?</h3>
+                                <p id="p_gw_manage_desc" style="text-align: left;">Commonly, greywater is discharged without any treatment into open spaces and drains. Stagnant greywater is not just an inconvenience but also a breeding ground for vectors, thereby increasing the exposure to waterborne diseases. Additionally, wastewater can also flow into the nearby water bodies or percolate into groundwater sources and pollute them. Even in cases where the greywater is collected, it ends up being redirected to the STP’s and soak pits, thereby mixing with blackwater and increasing the load on the treatment system.
+                                    <br><br>Additionally, wastewater can also flow into local water bodies or percolate into groundwater sources and pollute them. Even in cases where the greywater is collected, it ends up being redirected to the STP’s and soak pits, thereby mixing with blackwater and increasing the load on the treatment system.
+
+                                    <br><br>Hence, greywater management is essential to reduce health risks to humans and the ecosystem. In water scarce developing countries, greywater reuse in schools, hospitals and government institutions, treated greywater can also serve as  a substitute for non-potable uses of freshwater such as irrigation and flushing – thereby reducing the demand on freshwater sources.
+
+                                </p>
+                                <!-- <ul class="list-inline">
+                                        <li>
+                                            <strong>Client:</strong>
+                                            Explore
+                                        </li>
+                                        <li>
+                                            <strong>Category:</strong>
+                                            Graphic Design
+                                        </li>
+                                    </ul> -->
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
+                                    type="button">
+                                    <i class="fas fa-xmark me-1"></i>
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio item 3 modal popup-->
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
+                        alt="Close modal" /></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project details-->
+                                <h2 id="p_wti" class="text-uppercase">Treat it Separately!</h2>
+                                <p></p>
+                                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/3.jpg" alt="..." />
+                                <h3 id="p_sub_wti" class="item-intro text-muted">Why should it be treated separately?</h3>
+                                <p id="p_wti_desc" style="text-align: left;">Although blackwater and greywater are both wastewaters, they have different 
+                                    levels of contamination. The organic content and faecal contamination load in greywater is much lower as compared to 
+                                    blackwater or sewage. Therefore, separate treatment of greywater is always desirable as a large quantity of water can be 
+                                    recovered using low cost, low energy nature-based solutions (NbS).
+                                    <br><br>Across schools of India, the greywater is discharged into soak pits or let out into the open grounds or nearby stormwater drains. Government schools simultaneously experience the impacts of water scarcity and lack of  wastewater management. Presently, freshwater sources are used for non-potable uses such as flushing and gardening. This presents an opportunity to address greywater treatment and reuse at a community level and to sustainably manage it at the source.
+
+
+                                    <br><br>Advantages include:
+
+                                    <br>• Cost effective reuse of Greywater for non-potable uses
+                                    <br>• Minimises treatment pressure on centralized systems
+                                    <br>• Reduces risk to human and environmental health
+
+                                    <br><br><a
+                                        href="https://www.sciencedirect.com/science/article/pii/S0048969719347229"
+                                        target="_blank" style="color: #0C6E88;">
+                                        Source: https://www.sciencedirect.com/science/article/pii/S0048969719347229</a>
+                                </p>
+                                <!-- <ul class="list-inline">
+                                        <li>
+                                            <strong>Client:</strong>
+                                            Finish
+                                        </li>
+                                        <li>
+                                            <strong>Category:</strong>
+                                            Identity
+                                        </li>
+                                    </ul> -->
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
+                                    type="button">
+                                    <i class="fas fa-xmark me-1"></i>
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio item 4 modal popup-->
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
+                        alt="Close modal" /></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project details-->
+                                <h2 id="p_tes" class="text-uppercase">Treated Effluent Standards</h2>
+                                <p></p>
+                                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/4.jpg" alt="..." />
+                                <h3 id="p_sub_tes" class="item-intro text-muted">How much treatment is required?</h3>
+                                <p id="p_tes_desc" style="text-align: left;">Greywater treatment requirements vary based on chemical
+                                    characteristics and intended use of treated greywater. Irrigation and toilet
+                                    flushing are two common uses, but nearly any non-potable/ non-contact use is a
+                                    possibility.
+                                    <br><br>For eg: The excess amount of the treated greywater can be made suitable for irrigating lawns, 
+                                    flushing, floor cleaning, gardening, car washing, construction etc.
+                                    <br><br>The objective of all greywater treatment is to reduce the Biological Oxygen Demand (BOD)* 
+                                    and Fecal Coliform (FC)* content of the greywater, BOD and FC are metrics for determining the quality of water 
+                                    and estimating the degree of organic pollution in water.
+                                    <br><br>The interventions are designed and calculated to ensure that the BOD of the treated water for reuse is lesser than 
+                                    10mg/l, and for releasing into open drains is below 30mg/l as per to the KSPCB standards for treated effluents.
+
+                                    <br><br><a
+                                        href="https://environmentclearance.nic.in/writereaddata/Form-2/General1/04122018MAIPL126CTO.pdf"
+                                        target="_blank" style="color: #0C6E88;">
+                                        Source: https://environmentclearance.nic.in/writereaddata/Form-2/General1/04122018MAIPL126CTO.pdf</a>
+
+                                        <br><br><b>* BOD</b> is the amount of oxygen required by microorganisms to decompose organic matter in water
+                                        <br><br><b>* Fecal Coliform</b> is bacteria that is present in the gut and feces of warm blooded animals, when detected in water it indicates fecal contamination and the presence of pathogens 
+                                        
+
+
+                                </p>
+                                <!-- <ul class="list-inline">
+                                        <li>
+                                            <strong>Client:</strong>
+                                            Lines
+                                        </li>
+                                        <li>
+                                            <strong>Category:</strong>
+                                            Branding
+                                        </li>
+                                    </ul> -->
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
+                                    type="button">
+                                    <i class="fas fa-xmark me-1"></i>
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio item 5 modal popup-->
+    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
+                        alt="Close modal" /></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project details-->
+                                <h2 class="text-uppercase">Existing Interventions</h2>
+                                <p></p>
+                                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/5.jpg" alt="..." />
+                                <h3 class="item-intro text-muted">How can we treat the greywater?</h3>
+                                <p style="text-align: left;">Greywater treatment interventions can range from low-cost methods to advanced treatment systems that treat and disinfect the greywater to facilitate various reuse options.
+                                    <br><br>Treatment varies from anaerobic treatment processes, aerobic treatment processes and a combination of both anaerobic-aerobic treatment process, depending on the presence of oxygen available for the process. Existing treatment technologies are based on conventionally large – scale centralized models. However, proven and efficient NbS approaches to treatment that are adaptable to local site conditions can solve local greywater challenges in a low cost, low-energy manner. NbS, that mimic natural processes for treating the greywater have certain distinct advantages that include;
+                                    <!-- <br><br>Hence, cost -effective, proven and efficient approaches to treatment that
+                                    are adaptable to site specific hydro-social conditions are preferred. In this
+                                    dashboard, we are suggesting nature - based solutions as treatment options that are
+                                    not only economical, but also mimic natural processes. It also has other distinct
+                                    advantages that include the following; -->
+
+                                    <br>
+                                    <br>• Easy operation and maintenance
+                                    <br>• Makes use of locally available materials
+                                    <br>• Little or no requirement of external energy source
+                                    <br>• Reduced odours
+
+
+                                </p>
+                                <!-- <ul class="list-inline">
+                                        <li>
+                                            <strong>Client:</strong>
+                                            Southwest
+                                        </li>
+                                        <li>
+                                            <strong>Category:</strong>
+                                            Website Design
+                                        </li>
+                                    </ul> -->
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
+                                    type="button">
+                                    <i class="fas fa-xmark me-1"></i>
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio item 6 modal popup-->
+    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
+                        alt="Close modal" /></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project details-->
+                                <h2 class="text-u">AquaWISE</h2>
+                                <p></p>
+                                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/6.jpg" alt="..." />
+                                <h3 class="item-intro text-muted">What can be expected from the dashboard?</h3>
+                                <p style="text-align: left;">Based on the user’s inputs regarding the site conditions and the intended use of the treated water, appropriate greywater treatment solutions are generated, ranked in order of their increasing area requirement. These treatments require little or no energy inputs for its effective operation and maintenance. Brief information about each of the solutions is also provided which includes the estimated Capex charge.
+
+                                    <br><br>To maximise the treatment’s efficacy, a pre-treatment unit is also added. Additional pumping requirement might be present depending on the site conditions, to convey the greywater from its source to the treatment units.
+
+                                    <br><br>It is important to note that these calculations are general guidelines, and the specific design requirement will depend on the site-specific conditions and the regulatory requirements of the available area.
+
+                                
+                                </p>
+                                <!-- <ul class="list-inline">
+                                        <li>
+                                            <strong>Client:</strong>
+                                            Window
+                                        </li>
+                                        <li>
+                                            <strong>Category:</strong>
+                                            Photography
+                                        </li>
+                                    </ul> -->
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
+                                    type="button">
+                                    <i class="fas fa-xmark me-1"></i>
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- /////////////////////////////////////////////////////////////////////////////////////////// -->
+     <!-- Portfolio Modals-->
+    <!-- Portfolio item 1 modal popup-->
+    <div class="portfolio-modal modal fade" id="portfolioModal1_ka" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
+                        alt="Close modal" /></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project details-->
+                                <h2 id="p_identify_gw" class="text-uppercase">ಅಕ್ವಾವೈಸ್ ಉಪಯೋಗಿಸಿರುವ ನೀರನ್ನು (ಬೂದು ನೀರು) ಗುರುತಿಸಲು ಸಹಾಯ</h2>
+                                <p></p>
+                                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/1.jpg" alt="..." />
+                                <h3 id="p_sub_identify_gw" class="item-intro text-muted">ಬೂದು ನೀರು ಕಪ್ಪುನೀರಿಗಿಂತ ಹೇಗೆ ಭಿನ್ನವಾಗಿದೆ?
+                                </h3>
+                                <p id="p_identify_gw_desc" style="text-align: left;">ತ್ಯಾಜ್ಯ ನೀರನ್ನು ಎರಡು ವಿಧಗಳಾಗಿ ವಿಂಗಡಿಸಬಹುದು: ಕಪ್ಪು ನೀರು ಮತ್ತು ಬೂದು ನೀರು. 
+
+                                    <br><br><b>ಕಪ್ಪು ನೀರು:</b> ಶೌಚಾಲಯಗಳಿಂದ ಹೊರಬರುವ ತ್ಯಾಜ್ಯನೀರೇ ಕಪ್ಪುನೀರು. ಇದರಲ್ಲಿ ಮಲ ಮತ್ತು ರೋಗಕಾರಕಗಳಿರುತ್ತವೆ. ಕಪ್ಪು ನೀರು ಬೇಗನೇ ವಿಘಟಿಸುವುದಿಲ್ಲ ಮತ್ತು ನೀರಿನಲ್ಲಿ ಕೊಳೆಯುವುದಿಲ್ಲ. ದೇಶೀಯ ನೀರಾವರಿಯಲ್ಲಿ ಪರಿಣಾಮಕಾರಿಯಾಗಿ ಪುನರ್ಬಳಕೆ ಮಾಡಲು ಸಾಧ್ಯವಿಲ್ಲ. ಏಕೆಂದರೆ ಇದು ಕಲುಷಿತವಾಗಿರುತ್ತದೆ. 
+
+                                    <br><br><b>ಬೂದು ನೀರು:</b> ಸಾಮಾನ್ಯವಾಗಿ ಮನೆಗಳಲ್ಲಿ ಸ್ನಾನ ಮಾಡಿದಾಗ, ಪಾತ್ರೆಗಳನ್ನು ತೊಳೆದಾಗ, ಬಟ್ಟೆಗಳನ್ನು ಒಗೆದಾಗ ಮತ್ತಿತರ ಕೆಲಸಗಳನ್ನು ಮಾಡಿದಾಗ ಉತ್ಪತ್ತಿಯಾಗುವ ತ್ಯಾಜ್ಯ ನೀರನ್ನು ಸಾಮಾನ್ಯವಾಗಿ ಬೂದು ನೀರು ಎಂದು ಕರೆಯಲಾಗುತ್ತದೆ. ಈ ತ್ಯಾಜ್ಯ ನೀರಿನಲ್ಲಿ ಮಲ ಅಥವಾ ಮೂತ್ರದ ಕಲುಷತೆ ಇರುವುದಿಲ್ಲ. ಆದರೂ ಇದರಲ್ಲಿ ಸೋಪು, ಶಾಂಪೂ, ಡಿಟರ್ಜೆಂಟ್, ಬೆವರು, ಚರ್ಮ, ಕೂದಲು, ಎಣ್ಣೆ, ಗ್ರೀಸ್ ಮತ್ತಿತರ ಪದಾರ್ಥಗಳು, ಕಡಿಮೆ ಹಾನಿ ಮಾಡುವ ಬ್ಯಾಕ್ಟೀರಿಯಾಗಳು ಮತ್ತು ರೋಗಕಾರಕಗಳು ಇರುತ್ತವೆ. ಕಪ್ಪು ನೀರಿನೊಂದಿಗೆ ಹೋಲಿಸಿದರೆ ನೀರಿನ ಕೊರತೆ ಇರುವ ಪ್ರದೇಶಗಳಲ್ಲಿ ಇದರ ಸಂಸ್ಕರಣೆ ಮತ್ತು ಪುನರ್ಬಳಕೆಯನ್ನು (ಮರುಬಳಕೆ)  ವ್ಯಾಪಕವಾಗಿ ಆದ್ಯತೆ ನೀಡಲಾಗುತ್ತದೆ. 
+
+
+
+                                </p>
+                                <!-- <ul class="list-inline">
+                                        <li>
+                                            <strong>Client:</strong>
+                                            Threads
+                                        </li>
+                                        <li>
+                                            <strong>Category:</strong>
+                                            Illustration
+                                        </li>
+                                    </ul> -->
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
+                                    type="button">
+                                    <i class="fas fa-xmark me-1"></i>
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio item 2 modal popup-->
+    <div class="portfolio-modal modal fade" id="portfolioModal2_ka" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
+                        alt="Close modal" /></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project details-->
+                                <h2 id="p_gw_manage" class="text-uppercase">ಬೂದು ನೀರಿನ ನಿರ್ವಹಣೆ
+                                </h2>
+                                <p></p>
+
+                                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/2.jpg" alt="..." />
+                                <h3 id="'p_sub_gw_manage" class="item-intro text-muted">ಬೂದು ನೀರಿನ ನಿರ್ವಹಣೆ ನಮಗೆ ಏಕೆ ಬೇಕು? 
+                                </h3>
+                                <p id="p_gw_manage_desc" style="text-align: left;">ಸಾಮಾನ್ಯವಾಗಿ ಬೂದು ನೀರನ್ನು ಯಾವುದೇ ಬಗೆಯ ಸಂಸ್ಕರಣೆ ಇಲ್ಲದೇ ತೆರೆದ ಸ್ಥಳಗಳಿಗೆ , ಚರಂಡಿ, ಬೀದಿಗಳು ಮತ್ತು ರಸ್ತೆಗಳಿಗೆ ಬಿಡಲಾಗುತ್ತದೆ ಬೂದು ನೀರಿನಿಂದ ಕೇವಲ ಅನಾನುಕೂಲ ಆಗುವುದಿಲ್ಲ. ಇದು ರೋಗಕಾರಕ ಸೊಳ್ಳೆಯಂತಹ ಜೀವಿಗಳ ಸಂತಾನಾಭಿವೃದ್ಧಿ ನೆಲೆಯಾಗಿದೆ. ಇಂತಹ ಕಲುಷಿತ ನೀರಿನಲ್ಲಿ ಬೆಳೆದ ಸೊಳ್ಳೆಗಳು ಮಾನವರನ್ನು ಕಚ್ಚಿ ನಾನಾ ರೋಗಗಳು ಉಂಟುಮಾಡುತ್ತವೆ. 
+
+                                    <br><br>ಬೂದು ನೀರು ಹತ್ತಿರದ ಜಲಮೂಲಗಳನ್ನು ಸೇರಿ ಅವುಗಳನ್ನು ಕಲುಷಿತಗೊಳಿಸಬಹುದು. ಆಗ ಅಪಾಯವಾಗುವುದು ಖಂಡಿತ. ಬೂದು ನೀರನ್ನು ಸಂಗ್ರಹಿಸಿದಾಗಲೂ ಅದನ್ನು ಚರಂಡಿ ನೀರು ಸಂಸ್ಕರಣಾ ಘಟಕಗಳಿಗೆ ಮತ್ತು ತ್ಯಾಜ್ಯ ನೀರು ಸಂಗ್ರಹದ ಗುಂಡಿಗಳಿಗೆ ಹರಿಸಲಾಗುತ್ತದೆ. ಅಲ್ಲಿ ಬೂದು ನೀರು ಕಪ್ಪು ನೀರಿನೊಂದಿಗೆ ಬೆರೆತು ಸಂಸ್ಕರಣಾ ಸೌಲಭ್ಯದ ಕಾರ್ಯ ಹೆಚ್ಚಾಗಿ ಹೊರೆಯಾಗುತ್ತದೆ. ಆದ್ದರಿಂದ ಈ ಸಮಸ್ಯೆಗಳನ್ನು ಪರಿಹರಿಸಲು ಬೂದು ನೀರಿನ ಸರಿಯಾದ ನಿರ್ವಹಣೆ ಅತ್ಯಗತ್ಯ. ಜೊತೆಗೆ  ಬೂದು ನೀರಿನ ಸಮರ್ಪಕ ನಿರ್ವಹಣೆ ಎಂದರೆ ಸಾಕಷ್ಟು ಮಟ್ಟಿಗೆ ತಾಜಾ ನೀರಿನ ಬಳಕೆಯನ್ನು ಕಡಿಮೆ ಮಾಡುವ ಒಂದು ಅವಕಾಶ ಎಂದು ನಾವು ಅರ್ಥ ಮಾಡಿಕೊಳ್ಳಬಹುದು.
+                                    <br><br>ನೀರಿನ ಕೊರತೆ ಇರುವ ಅಭಿವೃದ್ಧಿಶೀಲ ರಾಷ್ಟ್ರಗಳಲ್ಲಿ ಬೂದು ನೀರು ಶಾಲೆಗಳಲ್ಲಿ, ಆಸ್ಪತ್ರೆಗಳಲ್ಲಿ ಮತ್ತು ಸರ್ಕಾರಿ ಸಂಸ್ಥೆಗಳಲ್ಲಿ ಸಂಪರ್ಕೇತರ/ಕುಡಿಯಲು ಅಲ್ಲದ ಉದ್ಧೇಶಗಳಿಗೆ ಬಳಕೆಯಾಗುತ್ತಿದ್ದು ತಾಜಾ ನೀರು, ಅಂತರ್ಜಲ, ಮೇಲ್ಮೈ ನೀರು ಮತ್ತು ಮಳೆನೀರಿನ ಪೂರೈಕೆಗೆ ಒಂದು ಅಗತ್ಯ ಪರ್ಯಾಯ ಜಲಮೂಲವಾಗಿದೆ. 
+
+                                </p>
+                                <!-- <ul class="list-inline">
+                                        <li>
+                                            <strong>Client:</strong>
+                                            Explore
+                                        </li>
+                                        <li>
+                                            <strong>Category:</strong>
+                                            Graphic Design
+                                        </li>
+                                    </ul> -->
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
+                                    type="button">
+                                    <i class="fas fa-xmark me-1"></i>
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio item 3 modal popup-->
+    <div class="portfolio-modal modal fade" id="portfolioModal3_ka" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
+                        alt="Close modal" /></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project details-->
+                                <h2 id="p_wti" class="text-uppercase">ಬೂದು ನೀರಿನ ಪ್ರತ್ಯೇಕ ಸಂಸ್ಕರಣೆ 
+                                </h2>
+                                <p></p>
+                                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/3.jpg" alt="..." />
+                                <h3 id="p_sub_wti" class="item-intro text-muted">ಬೂದು ನೀರನ್ನು ಏಕೆ ಪ್ರತ್ಯೇಕವಾಗಿ ಸಂಸ್ಕರಿಸಬೇಕು? 
+                                </h3>
+                                <p id="p_wti_desc" style="text-align: left;">ಕಪ್ಪು ನೀರು ಮತ್ತು ಬೂದು ನೀರು ಎರಡೂ ತ್ಯಾಜ್ಯ ನೀರೇ ಆಗಿದ್ದರೂ.  ಅವುಗಳ ಮಾಲಿನ್ಯದ ಪ್ರಮಾಣ ಬೇರೆಬೇರೆಯಾಗಿರುತ್ತದೆ. ಕಪ್ಪುನೀರು ಅಥವಾ ಚರಂಡಿ ನೀರಿಗೆ ಹೋಲಿಸಿದರೆ ಬೂದು ನೀರಿನಲ್ಲಿ ಸಾವಯವ ಅಂಶ ಮತ್ತು ಮಲದ ಪ್ರಮಾಣ ಕಡಿಮೆ ಇದೆ. ಆದ್ದರಿಂದ ಬೂದು ನೀರಿನ ಪ್ರತ್ಯೇಕ ಸಂಸ್ಕರಣೆ ಯಾವಾಗಲೂ ಅಪೇಕ್ಷಣೀಯ. ಜೊತೆಗೆ ಕಡಿಮೆ ಖರ್ಚಿನಲ್ಲಿ ಮತ್ತು ನಿಸರ್ಗ ಆಧಾರಿತ ಪರಿಹಾರಗಳಿಂದ ಭಾರೀ ಪ್ರಮಾಣದಲ್ಲಿ ಮರುಬಳಕೆಗೆ ಬೇಕಾದ ನೀರನ್ನು ಪಡೆಯಬಹುದು.
+                                    <br><br>ನಮ್ಮ ದೇಶದ ಸರ್ಕಾರಿ ಶಾಲೆಗಳಲ್ಲಿ ಬೂದು ನೀರನ್ನು ತ್ಯಾಜ್ಯ ನೀರು ಸಂಗ್ರಹದ ಗುಂಡಿಗಳಲ್ಲಿ, ತೆರೆದ ಮೈದಾನಗಳು ಅಥವಾ ಬಯಲಿನಲ್ಲಿ ಬಿಡಲಾಗುತ್ತದೆ ಆ ಪ್ರದೇಶಗಳಲ್ಲಿ ಆಗಾಗ ನೀರಿನ ಕೊರತೆಯಾಗುವುದರಿಂದ ಅಲ್ಲಿ ಮೂಲದಲ್ಲಿಯೇ ಬೂದು ನೀರಿನ ಸುಸ್ಥಿರ ನಿರ್ವಹಣೆ, ಸಂಸ್ಕರಣೆಗೆ ಮತ್ತು ಸಮುದಾಯ ಮಟ್ಟದಲ್ಲಿ ಅದರ ಮರುಬಳಕೆಗೆ ಸಮರ್ಥವಾದ ಅವಕಾಶವಿದೆ. 
+
+
+
+                                    <br><br>ಬೂದು ನೀರಿನ ಪ್ರತ್ಯೇಕ ಸಂಸ್ಕರಣೆಯ/ಮರುಬಳಕೆಯ ಪ್ರಯೋಜನಗಳು :
+
+                                    <br>• ಕಡಿಮೆ ವೆಚ್ಚದಲ್ಲಿ ಕುಡಿಯುವುದಕ್ಕೆ ಅಲ್ಲದೇ ಇತರ ಉದ್ದೇಶಗಳಿಗೆ ನೀರಿನ ಲಭ್ಯತೆ
+                                    <br>• ಕೇಂದ್ರೀಕೃತ ತ್ಯಾಜ್ಯ ನೀರು ಸಂಸ್ಕರಣಾ ವ್ಯವಸ್ಥೆಗಳ ಮೇಲೆ ಕಡಿಮೆ ಒತ್ತಡ
+
+                                    <br>• ಮಾನವ ಮತ್ತು ಪರಿಸರಕ್ಕೆ ಕಡಿಮೆ ಅಪಾಯ 
+
+
+                                    <br><br><a
+                                        href="https://www.sciencedirect.com/science/article/pii/S0048969719347229"
+                                        target="_blank" style="color: #0C6E88;">
+                                        Source: https://www.sciencedirect.com/science/article/pii/S0048969719347229</a>
+                                </p>
+                                <!-- <ul class="list-inline">
+                                        <li>
+                                            <strong>Client:</strong>
+                                            Finish
+                                        </li>
+                                        <li>
+                                            <strong>Category:</strong>
+                                            Identity
+                                        </li>
+                                    </ul> -->
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
+                                    type="button">
+                                    <i class="fas fa-xmark me-1"></i>
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio item 4 modal popup-->
+    <div class="portfolio-modal modal fade" id="portfolioModal4_ka" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
+                        alt="Close modal" /></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project details-->
+                                <h2 id="p_tes" class="text-uppercase">ತ್ಯಾಜ್ಯ ಜಲದ ಸಂಸ್ಕರಣಾ ಮಾನದಂಡಗಳು 
+                                </h2>
+                                <p></p>
+                                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/4.jpg" alt="..." />
+                                <h3 id="p_sub_tes" class="item-intro text-muted">ತ್ಯಾಜ್ಯ ಜಲವನ್ನು ಎಷ್ಟು ಸಂಸ್ಕರಣೆ ಮಾಡಬೇಕು? 
+                                </h3>
+                                <p id="p_tes_desc" style="text-align: left;">ಬೂದು ನೀರಿನ ಸಂಸ್ಕರಣೆಯ ಅವಶ್ಯಕತೆಗಳು ರಾಸಾಯನಿಕ ಗುಣಲಕ್ಷಣಗಳನ್ನು ಮತ್ತು ಸಂಸ್ಕರಿಸಿದ ಅದರ ಉದ್ದೇಶಿತ ಬಳಕೆಗೆ ತಕ್ಕಂತೆ ಬದಲಾಗುತ್ತದೆ. ನೀರಾವರಿ ಮತ್ತು ಶೌಚಾಲಯದಲ್ಲಿ ಫ್ಲಷ್ ಮಾಡಲು ಸಾಮಾನ್ಯವಾಗಿ ಸಂಸ್ಕರಿತ ಬೂದು ನೀರನ್ನು ಬಳಸಬಹುದು. ಇದಲ್ಲದೆ ಸಂಪರ್ಕೇತರ/ಕುಡಿಯಲು ಅಲ್ಲದ ಉದ್ಧೇಶಗಳಿಗೆ ಈ ನೀರನ್ನು ಧಾರಾಳವಾಗಿ ಬಳಸಬಹುದು.  ಉದಾಹರಣೆಗೆ ಹುಲ್ಲು ಹಾಸು ಬೆಳೆಸಲ, ಮನೆಯನ್ನು ಸ್ವಚ್ಛ ಮಾಡಲು, ತೋಟಗಾರಿಕೆಗೆ, ಕಾರು ತೊಳೆಯಲು, ಕಟ್ಟಡ ನಿರ್ಮಾಣ ಮಾಡಲು ಹೀಗೆ ಹತ್ತು ಹಲವು ಉದ್ದೇಶಗಳಿಗೆ ಸಂಸ್ಕರಿತ ಬೂದು ನೀರನ್ನು ಬಳಸಬಹುದು. ಬೂದು ನೀರಿನ ಸಂಸ್ಕರಣೆಯ ಉದ್ದೇಶವು ಮೂಲಭೂತವಾಗಿ ಜೈವಿಕ ಆಮ್ಲಜನಕದ ಬೇಡಿಕೆ* ಮತ್ತು ಫೀಕಲ್ ಕೋಲಿಫಾರ್ಮಿನ* ಅಂಶವನ್ನು ಕಡಿಮೆ  ಮಾಡುವುದಾಗಿದೆ.  ಇವೆರಡೂ ನೀರಿನ ಗುಣಮಟ್ಟವನ್ನು ನಿರ್ಧರಿಸಲು ಮತ್ತು ನೀರಿನಲ್ಲಿ ಸಾವಯವ ಮಾಲಿನ್ಯದ ಮಟ್ಟವನ್ನು ಅಂದಾಜು ಮಾಡಲು  ನಿರ್ಣಾಯಕವಾಗಿವೆ. ಈ ಉದ್ದೇಶಕ್ಕಾಗಿ ತಂತ್ರಜ್ಞಾನವನ್ನು ವಿನ್ಯಾಸಗೊಳಿಸಲಾಗಿದೆ.  ಕರ್ನಾಟಕ ರಾಜ್ಯ ಮಾಲಿನ್ಯ ನಿಯಂತ್ರಣ ಮಂಡಳಿಯ ಮಾನದಂಡಗಳ ಪ್ರಕಾರದ ಮರುಬಳಕೆ ನೀರಿನಲ್ಲಿ ಜೈವಿಕ ಆಮ್ಲಜನಕದ ಬೇಡಿಕೆ 10mg/l ಗಿಂತ ಕಡಿಮೆ ಇರಬೇಕು ಮತ್ತು ತೆರೆದ ಚರಂಡಿಗಳಿಗೆ ಬಿಡುಗಡೆ ಮಾಡಲು 30mg/l ಗಿಂತ ಕಡಿಮೆ ಇರಬೇಕು 
+
+
+                                    <br><br><a
+                                        href="https://environmentclearance.nic.in/writereaddata/Form-2/General1/04122018MAIPL126CTO.pdf"
+                                        target="_blank" style="color: #0C6E88;">
+                                        Source: https://environmentclearance.nic.in/writereaddata/Form-2/General1/04122018MAIPL126CTO.pdf</a>
+
+                                        <br><br><b>* ಜೈವಿಕ ಆಮ್ಲಜನಕದ</b> ಬೇಡಿಕೆ ಎನ್ನುವುದು ಸಾವಯವ ವಸ್ತುಗಳನ್ನು ಕೊಳೆಸಲು ಸೂಕ್ಷ್ಮಜೀವಿಗಳಿಗೆ ಅಗತ್ಯವಿರುವ ಆಮ್ಲಜನಕದ ಪ್ರಮಾಣವಾಗಿದೆ.
+
+                                        <br><br><b>* ಫೀಕಲ್ ಕೋಲಿಫಾರ್ಮ್</b> ಕರುಳಿನ ಮತ್ತು ಮಲದಲ್ಲಿ ಇರುವ ಬ್ಯಾಕ್ಟೀರಿಯಾವಾಗಿದೆ.  ಪ್ರಾಣಿಗಳು ಮತ್ತು ನೀರಿನಲ್ಲಿ ಇದು ಪತ್ತೆಯಾದಾಗ ಮಲ ಮಾಲಿನ್ಯ ಮತ್ತು ರೋಗಕಾರಕಗಳ ಉಪಸ್ಥಿತಿಯನ್ನು ಸೂಚಿಸುತ್ತದೆ.
+
+                                        
+
+
+                                </p>
+                                <!-- <ul class="list-inline">
+                                        <li>
+                                            <strong>Client:</strong>
+                                            Lines
+                                        </li>
+                                        <li>
+                                            <strong>Category:</strong>
+                                            Branding
+                                        </li>
+                                    </ul> -->
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
+                                    type="button">
+                                    <i class="fas fa-xmark me-1"></i>
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio item 5 modal popup-->
+    <div class="portfolio-modal modal fade" id="portfolioModal5_ka" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
+                        alt="Close modal" /></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project details-->
+                                <h2 class="text-uppercase">ಈಗಿರುವ ವಿಧಾನಗಳು 
+                                </h2>
+                                <p></p>
+                                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/5.jpg" alt="..." />
+                                <h3 class="item-intro text-muted">ಬೂದು ನೀರನ್ನು ನಾವು ಹೇಗೆ ಸಂಸ್ಕರಿಸಬಹುದು? 
+                                </h3>
+                                <p style="text-align: left;">ಬೂದು ನೀರಿನ ಮರುಬಳಕೆಯ ವಿಧಾನಗಳು ಕಡಿಮೆ ವೆಚ್ಚದ ವಿಧಾನಗಳಿಂದ ಹಿಡಿದು ಉನ್ನತ ವಿಧಾನಗಳವರೆಗೆ ಇವೆ. ಸೂಕ್ತ ಉನ್ನತ ಸಂಸ್ಕರಣೆ ಮತ್ತು ಸೋಂಕುರಹಿತಗೊಳಿಸುವ ವಿಧಾನಗಳು ಬೂದು ನೀರಿನ ಮರುಬಳಕೆಯ ಆದ್ಯತೆಯ ವಿಧಾನಗಳಾಗಿವೆ. ಲಭ್ಯವಿರುವ ಆಮ್ಲಜನಕದ ಆಧಾರದ ಮೇಲೆ ಬೂದು ನೀರಿನ ಸಂಸ್ಕರಣೆಯು ಆಮ್ಲಜನಕರಹಿತ, ಆಮ್ಲಜನಕಸಹಿತ ಸಂಸ್ಕರಣೆ ಮತ್ತು ಈ ಎರಡರ ಸಂಯೋಜನಾ ವಿಧಾನದಿಂದ ಆಗುತ್ತದೆ. ಈಗ ಲಭ್ಯವಿರುವ ತಂತ್ರಜ್ಞಾನದಲ್ಲಿ ಸಾಂಪ್ರದಾಯಿಕವಾಗಿ ದೊಡ್ಡ  ಪ್ರಮಾಣದ ಕೇಂದ್ರೀಕೃತ ಉದ್ದೇಶಿತ ಘಟಕಗಳಲ್ಲಿ ಬೂದು ನೀರನ್ನು ಮರುಬಳಕೆಗಾಗಿ ಸಂಸ್ಕರಿಸಲಾಗುತ್ತದೆ. ಅಭಿವೃದ್ಧಿಶೀಲ ರಾಷ್ಟ್ರಗಳಲ್ಲಿ ಈ ಸೌಲಭ್ಯ ಅಪರೂಪ. ಆದ್ದರಿಂದ ಕಡಿಮೆ ವೆಚ್ಚದ, ಸಮರ್ಥ ಮತ್ತು ಪರಿಣಾಮಕಾರಿ ವಿಧಾನಗಳಲ್ಲಿ ಈ ಕಾರ್ಯ ಮಾಡಲು ಆದ್ಯತೆ ನೀಡಲಾಗುತ್ತದೆ. ಈ ದಿಸೆಯಲ್ಲಿ ನಾವು  ಸಂಸ್ಕರಣೆಗಾಗಿ ನಿಸರ್ಗ ಆಧಾರಿತ ವಿಧಾನಗಳನ್ನು ಸಮರ್ಥ ಆಯ್ಕೆಯಾಗಿ ಮುಂದಿಡುತ್ತಿದ್ದೇವೆ. ಈ ವಿಧಾನಗಳು ಮಿತವ್ಯಯಕಾರಿಯಾಗಿದ್ದು ನಿಸರ್ಗದ ಪ್ರಕ್ರಿಯೆಗಳನ್ನೇ  ಅನುಕರಿಸುತ್ತದೆ. ಇದರ   ವಿಶಿಷ್ಟ ಪ್ರಯೋಜನಗಳು ಹೀಗಿವೆ: 
+
+
+                                    <br>
+                                    <br>• ಸುಲಭ ಕಾರ್ಯಾಚರಣೆ ಮತ್ತು ನಿರ್ವಹಣೆ
+
+                                    <br>•ಸ್ಥಳೀಯವಾಗಿ ಲಭ್ಯವಿರುವ ವಸ್ತುಗಳನ್ನು ಬಳಕೆ
+
+                                    <br>• ಬಾಹ್ಯ ಶಕ್ತಿಯ ಮೂಲದ  ಮೇಲಿನ ಅವಲಂಬನೆ ಕಡಿಮೆ ಅಥವಾ ಅದರ ಅಗತ್ಯವೇ ಇಲ್ಲ 
+
+                                    <br>•  ಕಡಿಮೆ ವಾಸನೆ 
+
+
+
+                                </p>
+                                <!-- <ul class="list-inline">
+                                        <li>
+                                            <strong>Client:</strong>
+                                            Southwest
+                                        </li>
+                                        <li>
+                                            <strong>Category:</strong>
+                                            Website Design
+                                        </li>
+                                    </ul> -->
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
+                                    type="button">
+                                    <i class="fas fa-xmark me-1"></i>
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio item 6 modal popup-->
+    <div class="portfolio-modal modal fade" id="portfolioModal6_ka" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
+                        alt="Close modal" /></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project details-->
+                                <h2 class="text-uppercase">ಅಕ್ವಾವೈಸ್</h2>
+                                <p></p>
+                                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/6.jpg" alt="..." />
+                                <h3 class="item-intro text-muted">ಈ ವಿಧಾನದಲ್ಲಿ (ಡ್ಯಾಷ್ಬೋರ್ಡ್) ನಾವು ಏನನ್ನು ನಿರೀಕ್ಷಿಸಬಹುದು? 
+                                </h3>
+                                <p style="text-align: left;">ಸ್ಥಳದ ಪರಿಸ್ಥಿತಿ ಬಗ್ಗೆ ಬಳಕೆದಾರರು ನೀಡುವ ಮಾಹಿತಿ ಮತ್ತು ಸಂಸ್ಕರಿಸಿದ ನೀರಿನ ಉದ್ದೇಶಿತ ಬಳಕೆಯ ಆಧಾರದ ಮೇಲೆ ಬೂದು ನೀರಿನ ಸಮರ್ಪಕ ಸಂಸ್ಕರಣಾ ವಿಧಾನಗಳನ್ನು ಸಂಸ್ಕರಿತ ನೀರು ಬಳಕೆಗೆ ಬೇಕಾಗುವ ಪ್ರದೇಶಗಳು ಹೆಚ್ಚಿದಂತೆ ಕ್ರಮವಾಗಿ ಶ್ರೇಣೀಕರಿಸಲಾಗುತ್ತದೆ  ಇದರ ಪರಿಣಾಮಕಾರಿ ಕಾರ್ಯಾಚರಣೆ ಮತ್ತು ನಿರ್ವಹಣೆಗಾಗಿ ಯಾವುದೇ ಹೆಚ್ಚುವರಿ ಶಕ್ತಿಯ ಅಗತ್ಯ ಇರುವುದಿಲ್ಲ. ಪ್ರತಿಯೊಂದು ವಿಧಾನದ ಬಗ್ಗೆ ಅಂದಾಜು ಬಂಡವಾಳ ಸೇರಿದಂತೆ ಸಂಕ್ಷಿಪ್ತ ಮಾಹಿತಿ ಒದಗಿಸಲಾಗುವುದು. 
+
+                                    <br><br>ಸಂಸ್ಕರಣೆಯ ಪರಿಣಾಮಕಾರಿತ್ವವನ್ನು ಹೆಚ್ಚಿಸಲು ಒಂದು ಪೂರ್ವ ಸಂಸ್ಕರಣಾ ಘಟಕವನ್ನು ಸಹ ಸೇರಿಸಲಾಗುತ್ತದೆ.  ಸ್ಥಳದ ಪರಿಸ್ಥಿತಿಗಳಿಗೆ ಅನುಗುಣವಾಗಿ ಬೂದು ನೀರನ್ನು ಮೂಲದಿಂದ ಸಂಸ್ಕರಣಾ ಘಟಕಗಳಿಗೆ ಸಾಗಿಸಲು ಹೆಚ್ಚುವರಿಯಾಗಿ ಪಂಪುಗಳನ್ನು ಅಳವಡಿಸಬೇಕಾಗಬಹುದು.  ಈ ಲೆಕ್ಕಾಚಾರಗಳು ಸಾಮಾನ್ಯ ಮಾರ್ಗಸೂಚಿಗಳು ಮತ್ತು ನಿರ್ದಿಷ್ಟವಾದವು ಎಂಬುದನ್ನು ಗಮನಿಸುವುದು ಮುಖ್ಯ. ವಿನ್ಯಾಸದ ಅವಶ್ಯಕತೆಯು ಸ್ಥಳಧ ನಿರ್ದಿಷ್ಟ ಪರಿಸ್ಥಿತಿಗಳನ್ನು ಅವಲಂಬಿಸಿರುತ್ತದೆ. 
+
+                                
+                                </p>
+                                <!-- <ul class="list-inline">
+                                        <li>
+                                            <strong>Client:</strong>
+                                            Window
+                                        </li>
+                                        <li>
+                                            <strong>Category:</strong>
+                                            Photography
+                                        </li>
+                                    </ul> -->
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
+                                    type="button">
+                                    <i class="fas fa-xmark me-1"></i>
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    <script src="js/lang.js"></script>
+
+</body>
+
+</html>

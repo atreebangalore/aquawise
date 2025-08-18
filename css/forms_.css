@@ -1,0 +1,330 @@
+/* ===== Google Font Import - Poppins ===== */
+
+
+.help-tip{
+	position: relative;
+	
+	align-items: left;
+
+	margin-left: 10px;
+	border: 2px solid grey;
+	border-radius: 50%;
+	width: 15px;
+    height: 15px;
+	
+    line-height: 6px;
+	cursor: pointer;
+}
+.help-tip:before{
+    content:'?';
+    font-size: 10px;
+    margin-left:2px;
+    font-family: sans-serif;
+    font-weight: normal;
+    color:#e0e0e0;
+}
+
+
+
+.help-tip:hover p{
+    display:block;
+    transform-origin: 100% 0%;
+    -webkit-animation: fadeIn 0.3s ease;
+    animation: fadeIn 0.3s ease;
+   
+    
+}
+
+.help-tip2 {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 10px;
+    line-height: 6px;
+}
+
+
+.help-tip2::before {
+    content: "?";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #d6d9da;
+    background-color: #026583;
+    color: #fff;
+    text-align: center;
+    line-height: 15px;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+.help-tip2 p {
+    display: none;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 200px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 25px;
+    left: 0;
+    z-index: 1000;
+}
+
+.help-tip2:hover p {
+    display: block;
+    
+}
+
+/* The tooltip */
+.help-tip p {    
+	display: none;
+	font-family: sans-serif;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	text-align: center;
+	background-color: #FFFFFF;
+	padding: 12px 16px;
+	width: auto;
+	height: auto;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 5%);
+	border-radius: 3px;
+/* 	border: 1px solid #E0E0E0; */
+	box-shadow: 0 0px 20px 0 rgba(0,0,0,0.1);
+	color: #37393D;
+	font-size: 12px;
+	line-height: 18px;
+	z-index: 99;
+}
+
+.help-tip p a {
+	color: #067df7;
+	text-decoration: none;
+}
+
+.help-tip p a:hover {
+	text-decoration: underline;
+}
+
+/* The pointer of the tooltip */
+.help-tip p:before { 
+	position: absolute;
+	content: '';
+	width: 0;
+	height: 0;
+	border: 10px solid transparent;
+	border-bottom-color:#FFFFFF;
+	top: -9px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+ /* Prevents the tooltip from being hidden */
+.help-tip p:after {
+	width: 10px;
+	height: 40px;
+	content:'';
+	position: absolute;
+	top: -40px;
+	left: 0;
+}
+
+/* CSS animation */
+@-webkit-keyframes fadeIn {
+    0% { opacity:0; }
+    100% { opacity:100%; }
+}
+
+@keyframes fadeIn {
+    0% { opacity:0; }
+    100% { opacity:100%; }
+}
+
+
+
+
+.formContainer{
+    min-height: 1vh;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    background: #efefef;
+    padding: 30px;
+    margin-top: 30px;
+
+}
+.form_inner_container{
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    border-radius: 6px;
+    padding: 30px;
+    margin: 0 1px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+.form_inner_container header{
+    position: relative;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+.form_inner_container header::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 3px;
+    width: 27px;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+}
+.form_inner_container form{
+    position: relative;
+    margin-top: 16px;
+    min-height: 490px;
+    background-color: #fff;
+    overflow: hidden;
+}
+.form_inner_container form .form{
+    position: absolute;
+    background-color: #fff;
+    transition: 0.3s ease;
+}
+.form_inner_container form .form.second{
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(100%);
+}
+form.secActive .form.second{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0);
+}
+form.secActive .form.first{
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-100%);
+}
+.form_inner_container form .title{
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 500;
+
+    color: #333;
+}
+.form_inner_container form .fields{
+    display: flex;
+    align-items: center;
+   justify-content: space-between;
+    flex-wrap: wrap;
+}
+form .fields .input-field{
+    display: flex;
+    width: calc(100% / 3 - 15px);
+    flex-direction: column;
+    margin: 4px 0;
+}
+.input-field label{
+    font-size: 12px;
+    font-weight: 500;
+    color: #2e2e2e;
+    margin-bottom: 4px;
+}
+.input-field input, select{
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #1363be;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    padding: 10px 15px;
+    height: 42px;
+    margin: 0px 0;
+}
+
+.input-field input :focus,
+.input-field select:focus{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.13);
+}
+.input-field select,
+.input-field input[type="date"]{
+    color: #707070;
+}
+.input-field input[type="date"]:valid{
+    color: #333;
+}
+.form_inner_container form button, .backBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    max-width: 200px;
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    border-radius: 5px;
+    margin: 25px 0;
+    background-color: #0B4E60;
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+.form_inner_container form .btnText{
+    font-size: 14px;
+    font-weight: 400;
+}
+form button:hover{
+    background-color: #095e75;
+}
+form button i,
+form .backBtn i{
+    margin: 0 6px;
+}
+form .backBtn i{
+    transform: rotate(180deg);
+}
+form .buttons{
+    display: flex;
+    align-items: center;
+}
+form .buttons button , .backBtn{
+    margin-right: 14px;
+}
+
+@media (max-width: 750px) {
+    .form_inner_container form{
+        overflow-y: scroll;
+        overflow-x: scroll;
+        display: flex;
+    }
+    .form_inner_container form::-webkit-scrollbar{
+        display: none;
+    }
+    form .fields .input-field{
+        width: calc(100% / 2 - 15px);
+    }
+}
+
+@media (max-width: 550px) {
+    form .fields .input-field{
+        width: 100%;
+
+    }
+    .formContainer {
+        padding: 0px;
+
+    }
+    .form_inner_container {
+        padding: 10px;
+    }
+}
+
+
+
+

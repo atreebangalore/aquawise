@@ -1,0 +1,21 @@
+# Ignore Windows system files
+desktop.ini
+Thumbs.db
+
+# Ignore node modules (if using Node.js)
+node_modules/
+
+# Ignore log files
+*.log
+
+# Ignore build output
+dist/
+build/
+
+# Ignore environment files
+.env
+
+# Ignore Mac system files
+.DS_Store
+
+# Ignore VS
