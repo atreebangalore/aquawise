@@ -124,14 +124,14 @@ This project is a static web app. To run locally:
 ## License
 
 - Bootstrap Agency theme used under MIT license.
-- All original content © 2024 AquaWISE.
+- All original content © 2025 ATREE AquaWISE.
 
 ## Contact
 
 For queries or support, mail to waterlab@atree.org.
 **ATREE – Ashoka Trust for Research in Ecology and the Environment**  
-Website: [https://www.atree.org](https://www.atree.org)  
-For feedback or contributions, please open an issue or PR on the GitHub repository.
+Website: [https://www.atree.org](https://www.atree.org)  [https://github.com/atreebangalore/aquawise]
+
 
 ---------------------------------------------------------------------------------------------------------------------------
 
