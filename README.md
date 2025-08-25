@@ -130,7 +130,8 @@ This project is a static web app. To run locally:
 
 For queries or support, mail to waterlab@atree.org.
 **ATREE – Ashoka Trust for Research in Ecology and the Environment**  
-Website: [https://www.atree.org](https://www.atree.org)  [https://github.com/atreebangalore/aquawise]
+Website: [https://www.atree.org](https://www.atree.org) 
+( For latest versions visit the ATREE github account @ https://github.com/atreebangalore/aquawise )
 
 
 ---------------------------------------------------------------------------------------------------------------------------
