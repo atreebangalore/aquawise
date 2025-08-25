@@ -117,7 +117,7 @@ This project is a static web app. To run locally:
 
 - Designed & developed by Sreekuttan V. N. [<img width="18" height="18" alt="image" src="https://github.com/user-attachments/assets/6aec12b5-0e00-45ab-a877-528c27324958" />
 )](https://www.linkedin.com/in/sreekuttanvn/) [https://www.atree.org/profile/sree-kuttan/]
-- The tool logic was curated by Shiva Subramanya [<img width="18" height="18" alt="image" src="https://github.com/user-attachments/assets/6aec12b5-0e00-45ab-a877-528c27324958" />
+- The tool logic was created by Shiva Subramanya [<img width="18" height="18" alt="image" src="https://github.com/user-attachments/assets/6aec12b5-0e00-45ab-a877-528c27324958" />
 )]([https://www.linkedin.com/in/sreekuttanvn/](https://www.linkedin.com/in/shiva-subramanya-08ba6736/)) [https://www.atree.org/profile/shiva-subramanya-s/]
 - Supported by [ATREE Water and Soil Lab](https://www.atree.org/water-and-soil-lab/) and [CDRI](https://www.cdri.world/).
 
